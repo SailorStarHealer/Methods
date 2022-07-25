@@ -1,0 +1,15 @@
+/Users/sopwithcamel/Projects/Methods/Methods/bin/Debug/net6.0/Methods
+/Users/sopwithcamel/Projects/Methods/Methods/bin/Debug/net6.0/Methods.deps.json
+/Users/sopwithcamel/Projects/Methods/Methods/bin/Debug/net6.0/Methods.runtimeconfig.json
+/Users/sopwithcamel/Projects/Methods/Methods/bin/Debug/net6.0/Methods.dll
+/Users/sopwithcamel/Projects/Methods/Methods/bin/Debug/net6.0/Methods.pdb
+/Users/sopwithcamel/Projects/Methods/Methods/obj/Debug/net6.0/Methods.csproj.AssemblyReference.cache
+/Users/sopwithcamel/Projects/Methods/Methods/obj/Debug/net6.0/Methods.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sopwithcamel/Projects/Methods/Methods/obj/Debug/net6.0/Methods.AssemblyInfoInputs.cache
+/Users/sopwithcamel/Projects/Methods/Methods/obj/Debug/net6.0/Methods.AssemblyInfo.cs
+/Users/sopwithcamel/Projects/Methods/Methods/obj/Debug/net6.0/Methods.csproj.CoreCompileInputs.cache
+/Users/sopwithcamel/Projects/Methods/Methods/obj/Debug/net6.0/Methods.dll
+/Users/sopwithcamel/Projects/Methods/Methods/obj/Debug/net6.0/refint/Methods.dll
+/Users/sopwithcamel/Projects/Methods/Methods/obj/Debug/net6.0/Methods.pdb
+/Users/sopwithcamel/Projects/Methods/Methods/obj/Debug/net6.0/Methods.genruntimeconfig.cache
+/Users/sopwithcamel/Projects/Methods/Methods/obj/Debug/net6.0/ref/Methods.dll
