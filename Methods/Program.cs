@@ -52,13 +52,12 @@
     //Static int means that these integer values will exist until the end of
     //the program.
     // 'List' denotes the type of element. 'Strng' denotes the stuff inside the list.
-    static void Fight(List<string> partyList, string monsterName, int monsterHP)
+    static void Fight(List<string> partyList, string monsterName, int monsterHP, int savingThrowDC)
     {
 
         Console.WriteLine($"Monster {monsterName} appears!");
         int pindex = 0;
         int currentMonsterHP = monsterHP;
-        int damage = 20;
         Console.WriteLine($"It's health points total {monsterHP}");
 
 
@@ -68,41 +67,39 @@
             var greatSword = DiceRoll(2, 6, 0);
             var hero = partyList[pindex];
             Console.Write($"{hero} strikes the {monsterName} for {greatSword} damage. ");
-            Console.WriteLine($"{monsterName} has {currentMonsterHP} HP left.");
-            currentMonsterHP = currentMonsterHP - damage;
-            pindex++;
+            currentMonsterHP = currentMonsterHP - greatSword;
+
+            if (currentMonsterHP <= 0)
+            {
+                Console.WriteLine($"You have slain {monsterName}!");
+            }
+            else
+            {
+                Console.WriteLine($"{monsterName} has {currentMonsterHP} HP left.");
+                pindex++;
+            }
 
             if (pindex >= partyList.Count)
             {
                 var victim = partyList[random.Next(0, partyList.Count)];
 
                 Console.WriteLine($"{monsterName} attacks {victim}!");
-                int attack = random.Next(1, 21);
-                var savingThrowDC = DiceRoll(1, 20, 0);
-                if (attack >= savingThrowDC)
+                int attack = DiceRoll(1,20,0);
+                if (attack < savingThrowDC)
                 {
                     partyList.Remove(victim);
                     Console.WriteLine($"Oh no, {victim} has fallen!");
-
-                    pindex = 0;
                 }
-
-
                 else
                 {
                     Console.WriteLine($"Yay, {victim} survived!");
-                    pindex = 0;
                 }
+
+                pindex = 0;
+
                 if (partyList.Count == 0)
                 {
-
                     break;
-                }
-
-                else
-                {
-
-                    pindex = 0;
                 }
 
 
@@ -117,20 +114,19 @@
     {
 
 
-        /* var partyList = new List<string> { "Hideyoshi", "Yoko", "Tamhome", "Usagi" };
-
+        /* 
          Console.WriteLine("Main");
 
          Console.Write("Expected results between 2 and 12: ");
          for (int i = 0; i < 20; i++)
          {
-             var sumDice = DiceRoll(2, 6, 0);
-             Console.Write($"{sumDice} , ");
+             var sumDice4 = DiceRoll(2, 6, 0);
+             Console.Write($"{sumDice4} , ");
          }
          Console.WriteLine("");
 
 
-         Console.Write("Expected results is 13: ");
+        Console.Write("Expected results is 13: ");
          for (int i = 0; i < 20; i++)
          {
              var sumDice = DiceRoll(10, 1, 3);
@@ -157,15 +153,16 @@
         }
         Console.Write(" enter the dungeon.");
         Console.WriteLine($"");
-      
-        var sumDice = DiceRoll(2, 6, 0);
 
-        Fight(partyList, "Orc", sumDice);
-        var sumDice2 = DiceRoll(10, 1, 3);
-        Fight(partyList, "Mage", sumDice2);
+        var sumDice = DiceRoll(2, 8, 6);
 
-        var sumDice3 = DiceRoll(5, 8, 100);
-        Fight(partyList, "Troll", sumDice3);
+        Fight(partyList, "Orc", sumDice, 12);
+        var sumDice2 = DiceRoll(9, 8, 0);
+
+        Fight(partyList, "Mage", sumDice2, 20);
+
+        var sumDice3 = DiceRoll(8, 10, 40);
+        Fight(partyList, "Troll", sumDice3, 18);
 
         if (partyList.Count == 0)
         {

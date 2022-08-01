@@ -1,9 +1,7 @@
 ﻿<Properties StartupConfiguration="{22CD896F-2F3E-4992-B5B1-7C2BB31E75F1}|Default">
-  <MonoDevelop.Ide.ItemProperties.Methods PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Methods/Program.cs">
     <Files>
-      <File FileName="Methods/Program.cs" Line="37" Column="36" />
+      <File FileName="Methods/Program.cs" Line="161" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,6 +16,8 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Methods PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
